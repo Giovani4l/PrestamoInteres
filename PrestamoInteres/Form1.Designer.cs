@@ -28,51 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            button1 = new Button();
+            txtMonto = new TextBox();
+            txtInteres = new TextBox();
+            txtPlazo = new TextBox();
+            btnCalcular = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtMonto
             // 
-            textBox1.Location = new Point(312, 132);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 0;
+            txtMonto.Location = new Point(312, 132);
+            txtMonto.Name = "txtMonto";
+            txtMonto.Size = new Size(125, 27);
+            txtMonto.TabIndex = 0;
             // 
-            // textBox2
+            // txtInteres
             // 
-            textBox2.Location = new Point(312, 198);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 1;
+            txtInteres.Location = new Point(312, 198);
+            txtInteres.Name = "txtInteres";
+            txtInteres.Size = new Size(125, 27);
+            txtInteres.TabIndex = 1;
             // 
-            // textBox3
+            // txtPlazo
             // 
-            textBox3.Location = new Point(312, 265);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 2;
+            txtPlazo.Location = new Point(312, 265);
+            txtPlazo.Name = "txtPlazo";
+            txtPlazo.Size = new Size(125, 27);
+            txtPlazo.TabIndex = 2;
             // 
-            // button1
+            // btnCalcular
             // 
-            button1.Location = new Point(330, 355);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 3;
-            button1.Text = "Calcular";
-            button1.UseVisualStyleBackColor = true;
+            btnCalcular.Location = new Point(330, 355);
+            btnCalcular.Name = "btnCalcular";
+            btnCalcular.Size = new Size(94, 29);
+            btnCalcular.TabIndex = 3;
+            btnCalcular.Text = "Calcular";
+            btnCalcular.UseVisualStyleBackColor = true;
+            btnCalcular.Click += btnCalcular_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btnCalcular);
+            Controls.Add(txtPlazo);
+            Controls.Add(txtInteres);
+            Controls.Add(txtMonto);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -82,9 +83,9 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Button button1;
+        private TextBox txtMonto;
+        private TextBox txtInteres;
+        private TextBox txtPlazo;
+        private Button btnCalcular;
     }
 }
