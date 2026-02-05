@@ -32,22 +32,27 @@ namespace PrestamoInteres
         {
             try
             {
-                //Instanciamos la clase con los datos capturados
-                Prestamo miPrestamo = new Prestamo
+                // ERROR POTENCIAL: Si no selecciona nada en el ComboBox
+                if (cmbInteres.SelectedIndex == -1)
                 {
-                    Monto = double.Parse(txtMonto.Text),
-                    TasaInteresAnual = double.Parse(txtInteres.Text),
-                    PlazoMeses = int.Parse(txtPlazo.Text)
-                };
+                    MessageBox.Show("Por favor selecciona una tasa de interés.");
+                    return;
+                }
 
-                //Abrimos el segundo formulario pasando el objeto
-                FormDetalle frmDetalle = new FormDetalle(miPrestamo);
-                frmDetalle.ShowDialog(); // Lo abrimos como ventana emergente
+                Prestamo miPrestamo = new Prestamo();
+                miPrestamo.Monto = double.Parse(txtMonto.Text);
+                miPrestamo.PlazoMeses = int.Parse(txtPlazo.Text);
+
+                // Limpiamos el texto "18%" para quedarnos solo con el número 18
+                string valorCombo = cmbInteres.Text.Replace("%", "");
+                miPrestamo.TasaInteresAnual = double.Parse(valorCombo);
+
+                FormDetalle ventana = new FormDetalle(miPrestamo);
+                ventana.Show();
             }
             catch (Exception ex)
             {
-                //Para que no se cierre el programa si hay espacios vacios y le dan a calcular
-                MessageBox.Show("Por favor, ingresa valores numéricos válidos.");
+                MessageBox.Show("Error: Revisa que el monto y los meses sean números válidos.");
             }
         }
     }

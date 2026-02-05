@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             txtMonto = new TextBox();
-            txtInteres = new TextBox();
             txtPlazo = new TextBox();
             btnCalcular = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            cmbInteres = new ComboBox();
             SuspendLayout();
             // 
             // txtMonto
@@ -43,13 +43,6 @@
             txtMonto.Name = "txtMonto";
             txtMonto.Size = new Size(125, 27);
             txtMonto.TabIndex = 0;
-            // 
-            // txtInteres
-            // 
-            txtInteres.Location = new Point(312, 198);
-            txtInteres.Name = "txtInteres";
-            txtInteres.Size = new Size(125, 27);
-            txtInteres.TabIndex = 1;
             // 
             // txtPlazo
             // 
@@ -95,17 +88,27 @@
             label3.TabIndex = 6;
             label3.Text = "Plazo en Meses:";
             // 
+            // cmbInteres
+            // 
+            cmbInteres.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbInteres.FormattingEnabled = true;
+            cmbInteres.Items.AddRange(new object[] { "18%" });
+            cmbInteres.Location = new Point(312, 202);
+            cmbInteres.Name = "cmbInteres";
+            cmbInteres.Size = new Size(125, 28);
+            cmbInteres.TabIndex = 7;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(cmbInteres);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnCalcular);
             Controls.Add(txtPlazo);
-            Controls.Add(txtInteres);
             Controls.Add(txtMonto);
             Name = "Form1";
             Text = "Form1";
@@ -117,11 +120,11 @@
         #endregion
 
         private TextBox txtMonto;
-        private TextBox txtInteres;
         private TextBox txtPlazo;
         private Button btnCalcular;
         private Label label1;
         private Label label2;
         private Label label3;
+        private ComboBox cmbInteres;
     }
 }
