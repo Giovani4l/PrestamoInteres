@@ -32,6 +32,9 @@
             txtInteres = new TextBox();
             txtPlazo = new TextBox();
             btnCalcular = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // txtMonto
@@ -65,11 +68,41 @@
             btnCalcular.UseVisualStyleBackColor = true;
             btnCalcular.Click += btnCalcular_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(124, 139);
+            label1.Name = "label1";
+            label1.Size = new Size(147, 20);
+            label1.TabIndex = 4;
+            label1.Text = "Monto del Préstamo:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(124, 205);
+            label2.Name = "label2";
+            label2.Size = new Size(177, 20);
+            label2.TabIndex = 5;
+            label2.Text = "Tasa de Interés Anual (%):";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(124, 272);
+            label3.Name = "label3";
+            label3.Size = new Size(113, 20);
+            label3.TabIndex = 6;
+            label3.Text = "Plazo en Meses:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(btnCalcular);
             Controls.Add(txtPlazo);
             Controls.Add(txtInteres);
@@ -87,5 +120,8 @@
         private TextBox txtInteres;
         private TextBox txtPlazo;
         private Button btnCalcular;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

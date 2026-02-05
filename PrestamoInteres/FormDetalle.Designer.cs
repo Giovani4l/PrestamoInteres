@@ -28,46 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            lblCuota = new Label();
+            dgvAmortizacion = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvAmortizacion).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblCuota
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 199);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            lblCuota.AutoSize = true;
+            lblCuota.Location = new Point(12, 199);
+            lblCuota.Name = "lblCuota";
+            lblCuota.Size = new Size(50, 20);
+            lblCuota.TabIndex = 0;
+            lblCuota.Text = "label1";
             // 
-            // dataGridView1
+            // dgvAmortizacion
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(393, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(395, 426);
-            dataGridView1.TabIndex = 1;
+            dgvAmortizacion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAmortizacion.Location = new Point(393, 12);
+            dgvAmortizacion.Name = "dgvAmortizacion";
+            dgvAmortizacion.RowHeadersWidth = 51;
+            dgvAmortizacion.Size = new Size(395, 426);
+            dgvAmortizacion.TabIndex = 1;
             // 
             // FormDetalle
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
-            Controls.Add(label1);
+            Controls.Add(dgvAmortizacion);
+            Controls.Add(lblCuota);
             Name = "FormDetalle";
             Text = "FormDetalle";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += FormDetalle_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvAmortizacion).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private DataGridView dataGridView1;
+        private Label lblCuota;
+        private DataGridView dgvAmortizacion;
     }
 }
